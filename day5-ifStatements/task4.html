@@ -1,0 +1,31 @@
+<!-- Task 4: Restaurant Menu
+Scenario: You are developing a restaurant menu system that provides the price of a dish based on the dish name.
+
+Task:
+Assume a variable dish holds the name of the dish as a string (e.g.,  "Biriyani", "shawarma", "Fried rice", "veg pula").
+Print the price. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dish=prompt("Enter dish given in the list 1)Biryani 2)shawarma 3)Fried rice 4)veg pula");
+        switch(dish){
+            case "biryani":
+                console.log("the amount is 100");
+            case "shawarma":
+                console.log("the amount is 50");
+            case "Fried rice":
+                console.log("the amount is 40");
+            case "veg pula":
+                console.log("the amount is 100");
+            default:
+                console.log("the dish is not in the menu");
+        }
+    </script>
+</body>
+</html>
