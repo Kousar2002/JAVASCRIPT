@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Task 1: Username Validation
+Scenario: Validate a username based on specific criteria. Task:
+Prompt the user to enter a username.
+Check if the username contains characters in between 5 to 15 long.
+Display a message indicating whether the username is valid or not. -->
+<script>
+    
+var text=prompt("enter user name: ");
+if(text.length<5){
+    console.log("enter a valid user name");
+}else if(text.length>=5 && text.length<=10){
+    console.log("user name is correct ");
+}else{
+    console.log("username is too long");
+}
+</script>
+
+</body>
+</html>
