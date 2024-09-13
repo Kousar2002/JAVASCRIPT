@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .added{
+            display: None;
+        }
+    </style>
+</head>
+<body>
+    <div class="added">
+        <h1>KOUSAR BANU</h1>
+    </div>
+    <button onclick="FUN()">clickMe</button>
+
+    <script>
+        var DIV=document.getElementsByClassName("added")[0];
+        console.log(DIV);
+        function FUN(){
+            DIV.classList.toggle("added");
+
+        }
+
+    </script>
+</body>
+</html>

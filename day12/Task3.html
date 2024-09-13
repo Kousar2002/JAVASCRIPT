@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .added{
+    background-color: blue;
+   }
+</style>
+<body>
+    <div class="added">
+        <h1>Kousar Banu</h1>
+    </div>
+    <button class="btn" onclick="FUN()">ClickMe</button>
+    <script>
+        var DIV=document.getElementsByClassName("added")[0];
+        var count=true;
+        function FUN(){
+            if(count){
+                DIV.classList.add("added");
+                count=false;
+            }else{
+                DIV.classList.remove("added");
+                count=true;
+            }
+        }
+        FUN();
+        
+    </script>
+</body>
+</html>

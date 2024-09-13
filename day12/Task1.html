@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3KLsKw0jLKi6EOWlMs2QnOvqlopxW-8i54w&s" alt="Image1"><br>
+    <button>Click</button>
+    <script>
+        var IMG=document.querySelector("img");
+        var btn=document.querySelector("button");
+        btn.addEventListener("click",function(){
+        IMG.setAttribute('src',"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPCnjtYHR-JqDzR0UHJduZ_pHI9LveRmtYug&s");
+        IMG.setAttribute('alt',"IMAGE2");
+        })
+        console.log(IMG);
+    </script>
+</body>
+</html>
