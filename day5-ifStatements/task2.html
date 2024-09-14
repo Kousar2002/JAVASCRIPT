@@ -6,31 +6,43 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+
+    </div>
     <script>
+        var DIV=document.getElementsByTagName('div')[0];
         Day=prompt("Enter the day: ")
         if(Day==="Sunday"){
             console.log("enjoy biryani");
+            DIV.innerText="enjoy biryani"
 
         }else if(Day==="Monday"){
             console.log("Start your week strong");
+            DIV.innerText="Start your week strong";
 
         }else if(Day==="Tuesday"){
             console.log('Keep going');
+            DIV.innerText="Keep going";
 
         }else if(Day==="wednesday"){
             console.log('Halfway there!');
+            DIV.innerText="Halfway there!";
 
         }else if(Day==="Thursday"){
             console.log('Almost the weekend!');
+            DIV.innerText="Almost the weekend!";
 
         }else if(Day==="Friday"){
 
             console.log('Happy friday');
+            DIV.innerText="Happy friday";
         }else if(Day==="Saturday"){
             console.log('enjoy weekend');
+            DIV.innerText="enjoy weekend";
 
         }else{
             console.log('NOt valid');
+            DIV.innerText="NOt valid";
         }
     </script>
 </body>

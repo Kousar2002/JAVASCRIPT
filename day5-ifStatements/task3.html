@@ -13,16 +13,24 @@ Scenario: Calculate the discount based on the total purchase amount.
     <title>Document</title>
 </head>
 <body>
+    <div>
+
+    </div>
     <script>
+        var DIV=document.getElementsByTagName('div')[0];
         var amount=+prompt("Enter discount: ");
         if(amount<50 && amount>0){
             console.log("NO discount");
+            DIV.innerText="NO discount"
         }else if(amount>=50 && amount<=100){
             console.log("5% discount");
+             DIV.innerText="5% discount"
         }else if(amount>=101 && amount<=200){
             console.log("10% discount");
+             DIV.innerText="10% discount"
         }else if(amount>200){
             console.log("15% discount");
+             DIV.innerText="15% discount"
         }
     </script>
 </body>

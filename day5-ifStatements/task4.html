@@ -12,19 +12,28 @@ Print the price. -->
     <title>Document</title>
 </head>
 <body>
+    <div>
+
+    </div>
     <script>
+         var DIV=document.getElementsByTagName('div')[0];
         var dish=prompt("Enter dish given in the list 1)Biryani 2)shawarma 3)Fried rice 4)veg pula");
         switch(dish){
             case "biryani":
                 console.log("the amount is 100");
+                DIV.innerText="the amount is 100";
             case "shawarma":
                 console.log("the amount is 50");
+                DIV.innerText="the amount is 50";
             case "Fried rice":
                 console.log("the amount is 40");
+                DIV.innerText="the amount is 40";
             case "veg pula":
                 console.log("the amount is 100");
+                DIV.innerText="the amount is 100";
             default:
                 console.log("the dish is not in the menu");
+                DIV.innerText="the dish is not in the menu";
         }
     </script>
 </body>

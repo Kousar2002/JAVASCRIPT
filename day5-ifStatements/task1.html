@@ -12,16 +12,24 @@ Scenario: Simulate a traffic light system.
     <title>Document</title>
 </head>
 <body>
+    <div>
+
+    </div>
     <script>
+       var DIV=document.getElementsByTagName('div')[0];
        var light=prompt("enter light:");
        if(light=="red"){
         console.log("please Stop");
+        DIV.innerText="please Stop"
        }else if(light=="yellow"){
         console.log("Get Ready");
+        DIV.innerText="Get Ready";
        }else if(light=="green"){
         console.log("GO");
+        DIV.innerText="GO";
        }else{
         console.log("Invalid");
+        DIV.innerText="Invalid";
        }
     </script>
 </body>

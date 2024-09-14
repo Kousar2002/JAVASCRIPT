@@ -6,31 +6,42 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+
+    </div>
     <script>
+         var DIV=document.getElementsByTagName('div')[0];
         a=+prompt("Enter the number1: ");
         b=+prompt("Enter the number2: ");
         operator=prompt("Enter the operator: ");
         switch(operator){
             case "+":
                 console.log(a+b);
+                DIV.innerText=`${a+b}`;
                 break;
             case  "-":
                 console.log(a+b);
+                DIV.innerText=`${a-b}`;
                 break;
             case "*":
                 console.log(a*b);
+                DIV.innerText=`${a*b}`;
                 break;
             case "/":
                 console.log(a/b);
+                DIV.innerText=`${a/b}`;
                 break;
             case "%":
                 console.log(a%b);
+                DIV.innerText=`${a%b}`;
                 break;
             case "**":
                 console.log(a**b);
+                DIV.innerText=`${a**b}`;
                 break;
             default:
                 console.log("Invalid");
+                DIV.innerText="INvalid";
         }
     </script>
 </body>
