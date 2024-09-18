@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1" placeholder="enter a value">
+    <input type="text" id="inp2" >
+    <div class="output">=value</div>
+    <button id="add">add</button>
+    <script>
+        var btn=document.getElementById("add");
+        btn.addEventListener("click",function(){
+            var inp1=document.getElementById('inp1');
+            var inp2=document.getElementById('inp2');
+            var value=Number(inp1.value)+Number(inp2.value);
+            console.log(value);
+            var div=document.querySelector("div");
+            // var div=document.getElementsByclassName("output")[0];
+            console.log(div);
+            div.innerHTML="="+value;
+            inp1.value=" ";
+            inp2.value=" ";
+        })
+    </script>
+
+
+</body>
+</html>

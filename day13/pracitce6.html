@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Calculator</title>
+    <style>
+        /* Basic styles */
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .input-field {
+            width: 90%;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .button {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" class="input-field" readonly>
+    <br>
+    <button class="button" onclick="displayValue('1')">1</button>
+    <button class="button" onclick="displayValue('2')">2</button>
+    <button class="button" onclick="displayValue('3')">3</button>
+    <button class="button" onclick="displayValue('+')">+</button>
+    <br>
+    <button class="button" onclick="displayValue('4')">4</button>
+    <button class="button" onclick="displayValue('5')">5</button>
+    <button class="button" onclick="displayValue('6')">6</button>
+    <button class="button" onclick="displayValue('-')">-</button>
+    <br>
+    <button class="button" onclick="displayValue('7')">7</button>
+    <button class="button" onclick="displayValue('8')">8</button>
+    <button class="button" onclick="displayValue('9')">9</button>
+    <button class="button" onclick="displayValue('*')">*</button>
+    <br>
+    <button class="button" onclick="displayValue('0')">0</button>
+    <button class="button" onclick="displayValue('.')">.</button>
+    <button class="button" onclick="calculateResult()">=</button>
+    <button class="button" onclick="displayValue('/')">/</button>
+    <br>
+    <button class="button" onclick="clearDisplay()">C</button>
+</div>
+
+<script>
+    // JavaScript functions
+    function displayValue(value) {
+        // Get the display input element
+        const display = document.getElementById('display');
+        // Append the clicked value to the display's current value
+        display.value += value;
+    }
+
+    function calculateResult() {
+        // Get the display input element
+        const display = document.getElementById('display');
+        try {
+            // Evaluate the expression in the display
+            display.value = eval(display.value);
+        } catch (e) {
+            // If there's an error (e.g., invalid expression), display an error message
+            display.value = "Error";
+        }
+    }
+
+    function clearDisplay() {
+        // Get the display input element
+        const display = document.getElementById('display');
+        // Clear the display
+        display.value = '';
+    }
+</script>
+
+</body>
+</html>

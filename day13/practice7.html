@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="main">
+    <input type="text" value="AC">
+    <input type="text" value="DEL">
+    <input type="text" class="per" value="%">
+    <input type="text" class="divs" value="/">
+    <input type="text" onclick="dispalyValue(7)" value="7">
+    <input type="text" onclick="dispalyValue(8)" value="8">
+    <input type="text" onclick="dispalyValue(9)" value="9">
+    <input type="text" class="+" value="+">
+    <input type="text" onclick="displayValue(4)" value="4">
+    <input type="text" onclick="displayValue(5)" value="5">
+    <input type="text" onclick="displayValue(6)" value="6">
+    <input type="text" class="minus" value="-">
+    <input type="text" onclick="displayValue('1')" class="inp" value="1">
+    <input type="text" onclick="displayValue('2')" class="inp" value="2">
+    <input type="text" onclick="displayValue('3')" class="inp" value="3">
+    <input type="text" class="plus" value="+">
+    <input type="text" value="0">
+    <input type="text" value="00">
+    <input type="text" id="point" value=".">
+    <input type="text" id="equal" value="=">
+</body>
+<script>
+    var main=document.getElementById('main');
+    // var INP=document.getElementsByClassName('inp');
+    
+    function displayValue(value){
+        main.value +=value;
+        // result=eval(main.value);
+        // console.log(result);
+        // console.log(main.value)
+    }
+    
+    // console.log(main.value);
+</script>
+</html>

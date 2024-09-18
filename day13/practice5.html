@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="enter user name" id="username">
+        <span>password is strong</span>
+        <input type="submit" id="sub">
+    </form>
+    <script>
+        var form=document.getElementsByTagName('form')[0];
+        var span=document.getElementsByTagName('span')[0];
+        var username=document.getElementById("username");
+        var inp2=document.getElementById("sub");
+        console.log(form);
+        console.log(span);
+        console.log(username);
+        inp2.addEventListener("click",function(){
+            event.preventDefault();
+        if(username.value.length>10){
+            console.log("strong password");
+            
+        }else if(username.value.length<10 && username.value.length>5){
+            console.log("passdamedui")
+            span.innerText="password is medium"
+        }
+        // if()
+    })
+
+    </script>
+</body>
+</html>
