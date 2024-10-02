@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+
+    </div>
+    <script>
+        let data=localStorage.getItem("arr");
+        // console.log(data);
+        data1=JSON.parse(data);
+        // console.log(data1);
+        data1.map((val)=>{
+                // newarr=[]
+                console.log(val);
+                var parent=document.querySelector(".row");
+                var main=document.createElement("div");
+                var child1=document.createElement("div");
+                var child2=document.createElement("div");
+                var child3=document.createElement("div");
+                // var btn=document.createElement("button");
+                var btn1=document.createElement("button");
+                child1.innerText=val.id;
+                child2.innerText=val.title;
+                child3.innerText=val.description;
+                // btn.innerText="clickMe";
+                btn1.innerText="remove";
+                // btn.addEventListener("click",()=>{
+                //     newarr=[]
+                //     newarr.push(val);
+                //     localStorage.setItem("arr",JSON.stringify(newarr));
+                //     console.log(newarr);
+                //     window.open("main1.html","_self");
+                // })
+                btn1.addEventListener("click",()=>{
+                    // console.log(val)
+                    // localStorage.removeItem(val);
+                    // let updatedData = data1.filter((item) => item.id !== val.id);
+                    data1 =data1.filter((item, i) => i !== index);
+
+// Update localStorage with the new array
+                    localStorage.setItem("arr", JSON.stringify(updatedData));
+                    main.remove();
+                })
+                // newarr.push(val);
+                // console.log(newarr);
+                main.append(child1,child2,child3,btn1);
+                parent.appendChild(main);
+                
+            })
+    </script>
+</body>
+</html>

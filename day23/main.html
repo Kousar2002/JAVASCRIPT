@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .row{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap:10px;
+    }
+    .row>div{
+        border: 1px solid blue;
+        padding: 5px;
+    }
+</style>
+<body>
+    <div>
+        <button id="butt">visitList</button>
+    </div>
+    <div class="row">
+
+    </div>
+    <script>
+        newarr=[]
+        async function fun(){
+            let res=await fetch("https://fakestoreapi.com/products");
+            let data=await res.json();
+            console.log(data);
+            // newarr=[]
+            data.map((val)=>{
+                // newarr=[]
+                // console.log(val);
+                var parent=document.querySelector(".row");
+                var main=document.createElement("div");
+                var child1=document.createElement("div");
+                var child2=document.createElement("div");
+                var child3=document.createElement("div");
+                var btn=document.createElement("button");
+                var btn1=document.createElement("button");
+                var butt=document.getElementById("butt");
+                child1.innerText=val.id;
+                child2.innerText=val.title;
+                child3.innerText=val.description;
+                btn.innerText="clickMe";
+                btn1.innerText="remove";
+                btn.addEventListener("click",()=>{
+                    // newarr=[]
+                    newarr.push(val);
+                    localStorage.setItem("arr",JSON.stringify(newarr));
+                    console.log(newarr);
+                    // window.open("main1.html","_self");
+                })
+                butt.addEventListener("click",()=>{
+                    window.open("main1.html","_self");
+                })
+                // btn1.addEventListener("click",()=>{
+                //     newarr.pop();
+                // })
+                // newarr.push(val);
+                // console.log(newarr);
+                main.append(child1,child2,child3,btn,btn1);
+                parent.appendChild(main);
+                
+            })
+            // document.body.appendChild(main);
+        }
+        fun();
+        // var main=document.createElement("div");
+        // var child1=document.createElement("div");
+        // var child2=document.createElement("div");
+        // var child3=document.createElement("div");
+        // main.append(child1,child2,child3);
+        // console.log(main);
+    </script>
+</body>
+</html>
